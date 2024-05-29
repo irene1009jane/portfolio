@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=1250, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<title>LittleFox_Trophy_ KR</title>
+<link rel="stylesheet" type="text/css" href="http://littlefox.co.kr/static/layout/global/css/pop.css" media="all">
+<link rel="stylesheet" type="text/css" href="/css/word_prize_all.css" media="all">
+</head>
+<body>
+<!-- Little Fox Popup Medium S -->
+<div class="temp_pop_voca">
+    <div class="temp_pop_cont">
+        <div class="tit">인쇄</div>
+
+        <div class="cont">
+
+            <div class="printable_box game ">
+                <div class="pb_pop_cont" id="pb_pop_cont">
+                    <div class="prize_out" id="prize_out">
+                        <div class="prize"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Little Fox Popup Medium E -->
+<!-- 상장 종류 선택 -->
+<style>@media print {.dev_mode {display:none;}}</style>
+<script src="https://img.littlefox.co.kr/static/layout/global/js/jquery-1.9.1.min.js"></script>
+<div class="dev_mode" style="position:absolute;left:10%;right:10%;bottom:5%;padding:1em;text-align:center;background:rgba(255,0,0,.4);">
+    <p style="margin-bottom:0.5em;color:red;font-weight:bolder;font-size:1.5em;">DEV MODE</p>
+
+    <div class="country_box">
+        <button type="button" data-section-name="ko_KR" class="country">KO</button>
+        <button type="button" data-section-name="zh_CN" class="country">CN</button>
+        <button type="button" data-section-name="zh_TW" class="country">TW</button>
+        <button type="button" data-section-name="zh_HK" class="country">HK</button>
+        <button type="button" data-section-name="ja_JP" class="country">JP</button>
+    </div>
+    <br>
+    <div class="level_box">
+        <button type="button" id="level1">level1(1~3단계)</button>
+        <button type="button" id="level2">level2(4~6단계)</button>
+        <button type="button" id="level3">level3(7~9단계)</button>
+    </div>
+</div>
+
+
+<script src="https://img.littlefox.co.kr/static/layout/global/js/jquery-1.9.1.min.js"></script>
+<script>
+var prize_data = {
+    "ko_KR" : [{
+        "country" : "ko_KR",
+        "class" : "ko",
+        "title" : "상장",
+        "number" : "제 03-406556 호",
+        "challenge" : "시리즈 워드 마스터",
+        "game" : "크로스워드 퍼즐",
+        "user" : '홍길동',
+        "text" : "위 사람은 Tire Town School 워드 마스터에 도전하여, 크로스워드 퍼즐의 모든 스테이지를 완료하였으므로 이 상장을 드립니다.",
+        "date" : "2020년 12월 21일",
+        "chief" : "리틀팍스 대표이사 양명선",
+    }],
+    "zh_CN" : [{
+        "country" : "zh_CN",
+        "class" : "cn",
+        "title" : "奖状",
+        "number" : "55555555555555",
+        "challenge" : "动画系列单词大师",
+        "game" : "星球大战",
+        "user" : '韩梅梅',
+        "text" : "生参加了“Tire Town School 2”单词大师的挑战，完成“星球大战”游戏，并通过所有关卡，特发此奖，以资鼓励。",
+        "date" : "2020年4月12日",
+        "chief" : "小狐狸英语动画CEO 梁明善",
+    }],
+    "zh_TW" : [{
+        "country" : "zh_TW",
+        "class" : "tw",
+        "title" : "獎狀",
+        "number" : "888888888888",
+        "challenge" : "動畫系列單詞大師",
+        "game" : "星球大戰",
+        "user" : '韓梅梅',
+        "text" : "該生參加了「Tire Town School 2」單詞大師的挑戰，完成「星球大戰」遊戲，並通過所有關卡，特發此獎，以資鼓勵。",
+        "date" : "2020年4月12日",
+        "chief" : "小狐狸英語動畫CEO 梁明善",
+    }],
+    "zh_HK" : [{
+        "country" : "zh_HK",
+        "class" : "hk",
+        "title" : "獎狀",
+        "number" : "9999999999999",
+        "challenge" : "動畫系列單詞大師",
+        "game" : "星球大戰",
+        "user" : '韓梅梅',
+        "text" : "該生參加了「Tire Town School 2」單詞大師的挑戰，完成「星球大戰」遊戲，並通過所有關卡，特發此獎，以資鼓勵。",
+        "date" : "2020年4月12日",
+        "chief" : "小狐狸英語動畫CEO 梁明善",
+    }],
+    "ja_JP" : [{
+        "country" : "ja_JP",
+        "class" : "jp",
+        "title" : "CERTIFICATE OF ACHIEVEMENT",
+        "number" : "4444444444",
+        "challenge" : "Series Word Master",
+        "game" : "크로스워드 퍼즐",
+        "user" : 'HONG GIL-DONG',
+        "text" : "is hereby awarded this certificate for  completing all stages of Tire Town School 2 Word Master on Star Words.",
+        "date" : "August 1, 2020",
+        "chief" : "Yang Myungseon CEO, Little Fox Co., Ltd.",
+    }],
+};
+
+
+/**
+ * UI Script
+ * @author Jo Seong-mi(2020.12.22)
+ */
+window.UIManager = (function($){
+
+    function _pageLoad(){
+        $('.country_box button').on('click', function(){
+            var _name = $(this).data('sectionName');
+
+            $(this).css('color', 'red').siblings('button').css('color', 'inherit');
+            $('.prize').children().remove();
+            _onInit(_name);
+        }).eq(0).trigger('click');
+
+        $('.level_box button').on('click', function(e){
+            var country = $('body').attr('id');
+
+            e.stopPropagation();
+
+            //console.log(country);
+
+            $(this).css('color', 'red').siblings('button').css('color', 'inherit');
+            var _id = $(this).prop('id');
+            var _bg, _type;
+
+            console.log(_id);
+
+            switch(_id){
+                case "level2":
+                    _bg = "/static/layout/"+country+"/img/profile/game_level2.jpg";
+                    _type = "level2";
+                    break;
+                case "level3":
+                    _bg = "/static/layout/"+country+"/img/profile/game_level3.jpg";
+                    _type = "level3";
+                    break;
+                default:
+                    _bg = "/static/layout/"+country+"/img/profile/game_level1.jpg";
+                    _type = "level1";
+            }
+
+            $('.printable_box').attr('id','game_'+_id).removeAttr('class');
+            $('#game_'+_id).addClass('printable_box game '+ _id)
+            .find('img.bg').prop('src', _bg).end();
+
+        }).eq(0).trigger('click');
+    }
+
+    /**
+	 * @param field 상장언어 종류
+	 */
+    function _onInit(field){
+        if(!field) return;
+
+        console.log(field);
+
+        $.each(prize_data[field], function(i, vo){
+
+            if(vo.country == field) {
+                _content = vo;
+
+                _draw(_content);
+
+                return false;
+            }
+        });
+
+        //console.log(_content);
+    };
+
+    function _draw(vo){
+        var drawHtml = '';
+            drawHtml += '<div class="prize_no">'+ vo.number +'</div>';
+            drawHtml += '<img src="/static/layout/'+ vo.country +'/img/profile/game_level1.jpg" class="bg">';
+            drawHtml += '<div class="prize_name"><img src="/static/layout/'+ vo.country +'/img/profile/title.png" title="'+ vo.title +'"></div>';
+            drawHtml += '<div class="user_data">';
+            drawHtml += '   <p class="data_img"><img src="/static/layout/global/img/profile/game/level2/birdkip.jpg" ait="동화이미지"></p>';
+            drawHtml += '   <p class="data_name">';
+            drawHtml += '       <span class="challenge">'+ vo.challenge +'</span>';
+            drawHtml += '       <span class="game">'+ vo.game +'</span>';
+            drawHtml += '       <span class="user">'+ vo.user +'</span>';
+            drawHtml += '   </p>';
+            drawHtml += '</div>';
+            drawHtml += '<div class="prize_text">'+ vo.text +'</div>';
+            drawHtml += '<div class="prize_date">'+ vo.date +'</div>';
+            drawHtml += '<div class="chief_name">'+ vo.chief +'</div>';
+
+        $('body')
+        .removeAttr('id').attr('id', vo.country)
+        .removeAttr('class').attr('class',vo.class);
+        $('.prize').append(drawHtml);
+    };
+
+    _pageLoad();
+
+}(jQuery));
+
+
+</script>
+</body>
+</html>

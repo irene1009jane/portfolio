@@ -1,0 +1,674 @@
+@charset "UTF-8";
+/**
+  * 리틀팔스영어 > 게임 상장 > 팝업
+  * @author Jo seong-mi (2020-12-10)
+  * 2020-12-14 SCSS 적용222
+  */
+/* Reset, Layout */
+html {
+  font-size: 150%;
+}
+
+html, body, div {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #000;
+}
+
+.printable_box .pb_pop_cont {
+  position: absolute;
+  top: 40px;
+  bottom: 68px;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+}
+
+.printable_box .guide {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 6px;
+  height: 60px;
+  background: #fff;
+  -webkit-box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.printable_box .guide > a {
+  line-height: 66px;
+}
+
+.printable_box .btn_w_h34 span {
+  padding: 0 5px 0 10px;
+}
+
+.prize {
+  position: relative;
+  width: 704px;
+  margin: 10px auto;
+}
+
+.prize > div {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+}
+
+/* content */
+.printable_box .prize .prize_name, .printable_box .prize .user_data, .printable_box .prize .chief_name {
+  display: block;
+}
+
+.printable_box .prize img.bg {
+  width: 100%;
+}
+
+.printable_box .prize .prize_no {
+  color: #444;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.printable_box .prize .prize_name {
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.printable_box .prize .user_data {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1em;
+}
+
+.printable_box .prize .user_data :after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.printable_box .prize .user_data .data_img {
+  display: inline-block;
+  width: 180px;
+  height: 120px;
+  vertical-align: top;
+}
+
+.printable_box .prize .user_data .data_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.printable_box .prize .user_data .data_name {
+  display: inline-block;
+  margin-left: 14px;
+  padding-top: 3px;
+  max-width: 264px;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.printable_box .prize .user_data .data_name span {
+  display: block;
+  text-align: left;
+  word-break: break-all;
+}
+
+.printable_box .prize .user_data .data_name .challenge {
+  margin-bottom: 4px;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.printable_box .prize .user_data .data_name .game {
+  margin-bottom: 13px;
+  color: #878787;
+  font-size: 1.5em;
+  letter-spacing: -0.5px;
+}
+
+.printable_box .prize .user_data .data_name .user {
+  font-size: 1.9em;
+  letter-spacing: -0.5px;
+}
+
+.printable_box .prize .prize_text {
+  font-size: 1.6em;
+  letter-spacing: -0.5px;
+  line-height: 1.6;
+  word-break: keep-all;
+  text-align: center;
+}
+
+.printable_box .prize .prize_date {
+  left: 45%;
+  font-size: 1.4em;
+  letter-spacing: -0.5px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.printable_box .prize .chief_name {
+  left: 36%;
+  right: 0;
+  font-size: 1.7em;
+  font-weight: bolder;
+  text-align: left;
+}
+
+/* print */
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+    page-break-after: always;
+  }
+  html {
+    font-size: 10pt;
+    background: #fff;
+    color: #000;
+  }
+  img {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+  .temp_pop_cont .tit,
+  .printable_box .guide {
+    display: none;
+  }
+  .prize_out {
+    height: 100%;
+  }
+  .temp_pop_voca {
+    border: 0;
+    position: static;
+  }
+  .printable_box .pb_pop_cont {
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    overflow: visible;
+  }
+  .prize {
+    margin: 0;
+    width: auto;
+    height: 100%;
+  }
+  .prize img.bg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/**
+ * 순서 : ko, cn, tw, hk, jp
+ */
+/* ko_KR */
+.ko .printable_box {
+  /* .level1 */
+  /* .level2 */
+  /* .level3 */
+}
+
+.ko .printable_box .prize * {
+  font-family: "Malgun Gothic", "맑은 고딕", GungsuhChe, "궁서", "궁서체", serif;
+}
+
+.ko .printable_box .prize .user_name {
+  display: none;
+}
+
+.ko .printable_box .prize .prize_text {
+  left: 14.5%;
+  right: 14.5%;
+}
+
+.ko .printable_box .prize .prize_name img {
+  width: 186px;
+  height: 75px;
+}
+
+.ko .printable_box.level1 .prize .prize_no {
+  top: 10%;
+}
+
+.ko .printable_box.level1 .prize .prize_name {
+  top: 20.6%;
+}
+
+.ko .printable_box.level1 .prize .user_data {
+  top: 35.5%;
+}
+
+.ko .printable_box.level1 .prize .prize_text {
+  top: 53.1%;
+}
+
+.ko .printable_box.level1 .prize .prize_date {
+  top: 71.5%;
+}
+
+.ko .printable_box.level1 .prize .chief_name {
+  top: 75%;
+}
+
+.ko .printable_box.level2 .prize .prize_no {
+  top: 16.3%;
+}
+
+.ko .printable_box.level2 .prize .prize_name {
+  top: 26.5%;
+}
+
+.ko .printable_box.level2 .prize .user_data {
+  top: 41.3%;
+}
+
+.ko .printable_box.level2 .prize .prize_text {
+  top: 59.7%;
+}
+
+.ko .printable_box.level2 .prize .prize_date {
+  top: 77.8%;
+}
+
+.ko .printable_box.level2 .prize .chief_name {
+  top: 81.3%;
+}
+
+.ko .printable_box.level3 .prize .prize_no {
+  top: 8%;
+}
+
+.ko .printable_box.level3 .prize .prize_name {
+  top: 19.7%;
+}
+
+.ko .printable_box.level3 .prize .user_data {
+  top: 36.9%;
+}
+
+.ko .printable_box.level3 .prize .prize_text {
+  top: 55.8%;
+}
+
+.ko .printable_box.level3 .prize .prize_date {
+  top: 75.4%;
+}
+
+.ko .printable_box.level3 .prize .chief_name {
+  top: 78.8%;
+}
+
+/* zh_CN, zh_TW, zh_HK */
+.cn .printable_box {
+  /* level1 */
+  /* level2 */
+  /* level3 */
+}
+
+.cn .printable_box .prize * {
+  font-family: "Noto Sans SC", GungsuhChe, "궁서", "궁서체", serif;
+}
+
+.cn .printable_box .prize .prize_no, .cn .printable_box .prize .chief_name {
+  display: none;
+}
+
+.cn .printable_box .prize .prize_text {
+  left: 14.5%;
+  right: 14.5%;
+}
+
+.cn .printable_box .prize .prize_name {
+  text-align: center;
+}
+
+.cn .printable_box .prize .prize_name img {
+  width: 147px;
+  height: 72px;
+}
+
+.cn .printable_box .prize .prize_date {
+  left: 50.7%;
+}
+
+.cn .printable_box .prize .data_name {
+  padding-top: 4px;
+}
+
+.cn .printable_box .prize .data_name .challenge {
+  margin-bottom: 0;
+}
+
+.cn .printable_box .prize .data_name .game {
+  margin-bottom: 11px;
+}
+
+.cn .printable_box.level1 .prize .prize_name {
+  top: 18.3%;
+}
+
+.cn .printable_box.level1 .prize .user_data {
+  top: 34.3%;
+}
+
+.cn .printable_box.level1 .prize .prize_text {
+  top: 52.2%;
+}
+
+.cn .printable_box.level1 .prize .prize_date {
+  top: 68.5%;
+}
+
+.cn .printable_box.level2 .prize .prize_name {
+  top: 24%;
+}
+
+.cn .printable_box.level2 .prize .user_data {
+  top: 39.3%;
+}
+
+.cn .printable_box.level2 .prize .prize_text {
+  top: 57.7%;
+}
+
+.cn .printable_box.level2 .prize .prize_date {
+  top: 74.3%;
+}
+
+.cn .printable_box.level3 .prize .prize_name {
+  top: 16.9%;
+}
+
+.cn .printable_box.level3 .prize .user_data {
+  top: 35%;
+}
+
+.cn .printable_box.level3 .prize .prize_text {
+  top: 53.6%;
+}
+
+.cn .printable_box.level3 .prize .prize_date {
+  top: 71.4%;
+}
+
+.tw .printable_box {
+  /* level1 */
+  /* level2 */
+  /* level3 */
+}
+
+.tw .printable_box .prize * {
+  font-family: "Noto Sans SC", GungsuhChe, "궁서", "궁서체", serif;
+}
+
+.tw .printable_box .prize .prize_no, .tw .printable_box .prize .chief_name {
+  display: none;
+}
+
+.tw .printable_box .prize .prize_text {
+  left: 14.5%;
+  right: 14.5%;
+}
+
+.tw .printable_box .prize .prize_name {
+  text-align: center;
+}
+
+.tw .printable_box .prize .prize_name img {
+  width: 147px;
+  height: 72px;
+}
+
+.tw .printable_box .prize .prize_date {
+  left: 50.7%;
+}
+
+.tw .printable_box .prize .data_name {
+  padding-top: 4px;
+}
+
+.tw .printable_box .prize .data_name .challenge {
+  margin-bottom: 0;
+}
+
+.tw .printable_box .prize .data_name .game {
+  margin-bottom: 11px;
+}
+
+.tw .printable_box.level1 .prize .prize_name {
+  top: 18.3%;
+}
+
+.tw .printable_box.level1 .prize .user_data {
+  top: 34.3%;
+}
+
+.tw .printable_box.level1 .prize .prize_text {
+  top: 52.2%;
+}
+
+.tw .printable_box.level1 .prize .prize_date {
+  top: 68.5%;
+}
+
+.tw .printable_box.level2 .prize .prize_name {
+  top: 24%;
+}
+
+.tw .printable_box.level2 .prize .user_data {
+  top: 39.3%;
+}
+
+.tw .printable_box.level2 .prize .prize_text {
+  top: 57.7%;
+}
+
+.tw .printable_box.level2 .prize .prize_date {
+  top: 74.3%;
+}
+
+.tw .printable_box.level3 .prize .prize_name {
+  top: 16.9%;
+}
+
+.tw .printable_box.level3 .prize .user_data {
+  top: 35%;
+}
+
+.tw .printable_box.level3 .prize .prize_text {
+  top: 53.6%;
+}
+
+.tw .printable_box.level3 .prize .prize_date {
+  top: 71.4%;
+}
+
+.hk .printable_box {
+  /* level1 */
+  /* level2 */
+  /* level3 */
+}
+
+.hk .printable_box .prize * {
+  font-family: "Noto Sans SC", GungsuhChe, "궁서", "궁서체", serif;
+}
+
+.hk .printable_box .prize .prize_no, .hk .printable_box .prize .chief_name {
+  display: none;
+}
+
+.hk .printable_box .prize .prize_text {
+  left: 14.5%;
+  right: 14.5%;
+}
+
+.hk .printable_box .prize .prize_name {
+  text-align: center;
+}
+
+.hk .printable_box .prize .prize_name img {
+  width: 147px;
+  height: 72px;
+}
+
+.hk .printable_box .prize .prize_date {
+  left: 50.7%;
+}
+
+.hk .printable_box .prize .data_name {
+  padding-top: 4px;
+}
+
+.hk .printable_box .prize .data_name .challenge {
+  margin-bottom: 0;
+}
+
+.hk .printable_box .prize .data_name .game {
+  margin-bottom: 11px;
+}
+
+.hk .printable_box.level1 .prize .prize_name {
+  top: 18.3%;
+}
+
+.hk .printable_box.level1 .prize .user_data {
+  top: 34.3%;
+}
+
+.hk .printable_box.level1 .prize .prize_text {
+  top: 52.2%;
+}
+
+.hk .printable_box.level1 .prize .prize_date {
+  top: 68.5%;
+}
+
+.hk .printable_box.level2 .prize .prize_name {
+  top: 24%;
+}
+
+.hk .printable_box.level2 .prize .user_data {
+  top: 39.3%;
+}
+
+.hk .printable_box.level2 .prize .prize_text {
+  top: 57.7%;
+}
+
+.hk .printable_box.level2 .prize .prize_date {
+  top: 74.3%;
+}
+
+.hk .printable_box.level3 .prize .prize_name {
+  top: 16.9%;
+}
+
+.hk .printable_box.level3 .prize .user_data {
+  top: 35%;
+}
+
+.hk .printable_box.level3 .prize .prize_text {
+  top: 53.6%;
+}
+
+.hk .printable_box.level3 .prize .prize_date {
+  top: 71.4%;
+}
+
+/* ja_JP */
+.jp .printable_box {
+  /* level1 */
+  /* level2 */
+  /* level3 */
+}
+
+.jp .printable_box .prize * {
+  font-family: "Arial", Meiryo, "メイリオ", "MS PGothic", "Osaka", sans-serif;
+}
+
+.jp .printable_box .prize .prize_no, .jp .printable_box .prize .chief_name {
+  display: none;
+}
+
+.jp .printable_box .prize .prize_text {
+  top: 45%;
+  left: 14.5%;
+  right: 14.5%;
+}
+
+.jp .printable_box .prize .prize_name {
+  text-align: center;
+}
+
+.jp .printable_box .prize .prize_name img {
+  width: 373px;
+  height: 84px;
+}
+
+.jp .printable_box .prize .user_data .data_img {
+  margin-left: 25px;
+}
+
+.jp .printable_box .prize .prize_date {
+  left: 50.6%;
+}
+
+.jp .printable_box.level1 .prize .prize_name {
+  top: 19.4%;
+}
+
+.jp .printable_box.level1 .prize .user_data {
+  top: 35.4%;
+}
+
+.jp .printable_box.level1 .prize .prize_text {
+  top: 53.1%;
+}
+
+.jp .printable_box.level1 .prize .prize_date {
+  top: 69.5%;
+}
+
+.jp .printable_box.level2 .prize .prize_name {
+  top: 23.5%;
+}
+
+.jp .printable_box.level2 .prize .user_data {
+  top: 39.9%;
+}
+
+.jp .printable_box.level2 .prize .prize_text {
+  top: 57.5%;
+}
+
+.jp .printable_box.level2 .prize .prize_date {
+  top: 74.8%;
+}
+
+.jp .printable_box.level3 .prize .prize_name {
+  top: 17.7%;
+}
+
+.jp .printable_box.level3 .prize .user_data {
+  top: 35.6%;
+}
+
+.jp .printable_box.level3 .prize .prize_text {
+  top: 54.1%;
+}
+
+.jp .printable_box.level3 .prize .prize_date {
+  top: 72.1%;
+}
+/*# sourceMappingURL=word_prize_all.css.map */

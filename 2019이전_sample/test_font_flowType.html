@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<base target="_blank">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="IE=EDGE">
+<meta name="Author" content="JANE">
+<title>FlowType 폰트조절 플러그인 :: test_font_flowType</title>
+<link rel="stylesheet" type="text/css" href="css/ui.reset.css">
+<link rel="stylesheet" type="text/css" href="css/ui.guide.css">
+</head>
+<!-- wrap -->
+<div id="wrap" class="jane_ui">
+
+	<!-- header -->
+	<header><h1>FlowType 폰트조절 플러그인</h1></header>
+	<!-- //header -->
+
+	<p>브라우저 크기를 조절해보세요</p>
+
+	<br><br>
+	<!-- container -->
+	<div id="container">
+
+		ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz가개갸거게겨고괴괘교구귀궤규그긔기나내냐너네녀노뇌놰뇨누뉘눼뉴느늬니다대댜더데뎌도되돼됴두뒤뒈류드듸디라래랴러레려로뢰뢔료루뤼뤠류르릐리마매먀머메며모뫼뫠묘무뮈뭬뮤므믜미바배뱌버베벼보뵈봬뵤부뷔붸뷰브븨비사새샤서세셔소쇠쇄쇼수쉬쉐슈브븨비아애야어에여오외왜요우위웨유으의이자재쟈저제져조죄좨죠주쥐줴쥬즈즤지차채챠처체쳐초최쵀쵸추취췌츄츠츼치카캐캬커케켜코쾨쾌쿄쿠퀴퀘큐크킈키타태탸터테텨토퇴퇘툐투튀퉤튜트틔티파패퍄퍼페펴포푀퐤표푸퓌풰퓨프픠피하해햐허헤혀호회홰효후휘훼휴흐희히1234567890‘
+
+	</div>
+	<!-- //container -->
+
+	<div class="copyright"> * Copyright (c) JANE. All rights reserved.</div>
+
+</div>
+<!-- // wrap -->
+
+
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/flowtype.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	subtitle_flowtype();
+});
+function subtitle_flowtype(){
+    $("#container").flowtype({
+         minimum   : 320,
+         maximum   : 9999,
+         minFont   : 12,
+         maxFont   : 50,
+         fontRatio : 40
+    });
+}
+</script>
+</body>
+</html>

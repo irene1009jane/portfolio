@@ -1,0 +1,242 @@
+{
+    "solveInfo": {
+        "seriesName": "Rocket Girl and the Aliens 1",
+        "partTitle" : "Sloppy Joe Day",
+        "level" : "7",
+        "targetScore" : "70",
+        "userScore" : "100"
+    },
+    "questionInfo": [
+        {
+            "title" : "1. 제시된 단어의 알맞은 뜻을 고르세요.",
+            "type": "MULTI",
+            "presentationType": "WORD",
+            "presentation" : "throw one's arms around someone",
+            "imgageUrl": "",
+            "language": "en",
+            "exampleList" : [
+                {
+                    "id": "Q1ID1",
+                    "num": "a",
+                    "title": "눈이 내리다"
+                },
+                {
+                    "id": "Q1ID3",
+                    "num": "b",
+                    "title": "입력한 도면을 바탕으로 3차원의 입체 물품을 만들어내는 기계"
+                },
+                {
+                    "id": "Q1ID2",
+                    "num": "c",
+                    "title": "변하다, 바뀌다"
+                }
+            ],
+            "userAnswer" : [],
+            "grade" : []
+        },
+        {
+            "title" : "2. 제시된 단어의 알맞은 뜻을 고르세요.",
+            "type": "MULTI",
+            "presentationType": "WORD",
+            "presentation" : "입력한 도면을 바탕으로 3차원의 입체 물품을 만들어내는 기계",
+            "imgageUrl": "",
+            "language": "ko",
+            "exampleList" : [
+                {
+                    "id": "Q2ID1",
+                    "num": "a",
+                    "title": "change"
+                },
+                {
+                    "id": "Q2ID2",
+                    "num": "b",
+                    "title": "rarely"
+                },
+                {
+                    "id": "Q2ID4",
+                    "num": "c",
+                    "title": "sheriff"
+                },
+                {
+                    "id": "Q2ID3",
+                    "num": "d",
+                    "title": "sheriff"
+                }
+            ],
+            "userAnswer" : [],
+            "grade" : []
+        },
+        {
+            "title" : "3. 문장을 읽고, 그림과 가장 잘 어울리는 것을 고르세요.",
+            "type": "MULTI",
+            "presentationType": "IMG",
+            "presentation" : "",
+            "imgageUrl": "//cdn.littlefox.co.kr/contents/ebook/C0006760/C0006760_cover.jpg?170818151604",
+            "language": "",
+            "exampleList" : [
+                {
+                    "id": "Q3ID1",
+                    "num": "a",
+                    "title": "Cow said, \"Walk around the well three times."
+                },
+                {
+                    "id": "Q3ID2",
+                    "num": "b",
+                    "title": "Cow said, \"Walk around the well three times."
+                },
+                {
+                    "id": "Q3ID3",
+                    "num": "c",
+                    "title": "Cow said, \"Walk around the well three times."
+                }
+            ],
+            "userAnswer" : [],
+            "grade" : []
+        },
+        {
+            "title" : "4. 문제를 읽고, 답으로 가장 알맞은 것을 고르세요.",
+            "type": "MULTI",
+            "presentationType": "BOTH",
+            "presentation" : "When did Maggie and cole realize why Henry asked Ryan to do a handstand?",
+            "imgageUrl": "//cdn.littlefox.co.kr/contents/ebook/C0006760/C0006760_cover.jpg?170818151604",
+            "language": "en",
+            "exampleList" : [
+                {
+                    "id": "Q4ID2",
+                    "num": "a",
+                    "title": "Mother thought Jack made much money with Milky White."
+                },
+                {
+                    "id": "Q4ID1",
+                    "num": "b",
+                    "title": "Mother thought Jack made much money with Milky White."
+                },
+                {
+                    "id": "Q4ID3",
+                    "num": "c",
+                    "title": "Mother thought Jack made much money with Milky White."
+                }
+            ],
+            "userAnswer" : [],
+            "grade" : []
+        },
+        {
+            "title" : "5. 문제를 읽고, 답으로 가장 알맞은 것을 고르세요.",
+            "type": "MULTI",
+            "presentationType": "BLANK",
+            "presentation" : "How many son did the miller have?  How many son did the <br>miller have? The miller had <span class=\"blank\">&nbsp;</span> sons.",
+            "imgageUrl": "",
+            "language": "en",
+            "exampleList" : [
+                {
+                    "id": "Q5ID2",
+                    "num": "a",
+                    "title": "Mother thought Jack made much money with Milky White."
+                },
+                {
+                    "id": "Q5ID1",
+                    "num": "b",
+                    "title": "Mother thought Jack made much money with Milky White."
+                },
+                {
+                    "id": "Q5ID3",
+                    "num": "c",
+                    "title": "Mother thought Jack made much money with Milky White."
+                }
+            ],
+            "userAnswer" : [],
+            "grade" : []
+        },
+        {
+            "title" : "6. 문장을 읽고, 내용과 일치하면 True, 일치하지 않으면 False를 선택하세요.",
+            "type": "TF",
+            "presentationType": "WORD",
+            "presentation" : "Jill and Ashley felt bad when Maggie said why she wanted her omney back.",
+            "imgageUrl": "",
+            "language": "en",
+            "exampleList" : [],
+            "userAnswer" : [],
+            "grade" : []
+        },
+        {
+            "title" : "7. 내용의 순서에 맞게 문장을 차례대로 선택하여 번호를 매기세요. <br><span class=\"guide_text\">(문항당 1점)</span>",
+            "type": "SUMMERY",
+            "presentationType": "",
+            "presentation" : "",
+            "imgageUrl": "",
+            "language": "",
+            "exampleList" : [
+                {
+                    "id": "Q7ID1",
+                    "num": "1)",
+                    "title": "a1Mother thought Jack made much money with White."
+                },
+                {
+                    "id": "Q7ID2",
+                    "num": "2)",
+                    "title": "b2Mother thought Jack made much money with White."
+                },
+                {
+                    "id": "Q7ID3",
+                    "num": "3)",
+                    "title": "c3Mother thought Jack made much money with White."
+                },
+                {
+                    "id": "Q7ID4",
+                    "num": "4)",
+                    "title": "d4Mother thought Jack made much money with White."
+                },
+                {
+                    "id": "Q7ID5",
+                    "num": "5)",
+                    "title": "e5Mother thought Jack made much money with White."
+                },
+                {
+                    "id": "Q7ID6",
+                    "num": "6)",
+                    "title": "f6Mother thought Jack made much money with White."
+                },
+                {
+                    "id": "Q7ID7",
+                    "num": "7)",
+                    "title": "g7How did Ben and Waldo know Miss Bungle's sickness was different?"
+                }
+            ],
+            "userAnswer" : [],
+            "grade" : []
+        },
+        {
+            "title" : "8. 내용의 순서에 맞게 문장을 차례대로 선택하여 번호를 매기세요. <br><span class=\"guide_text\">(문항당 1점)</span>",
+            "type": "SUMMERY",
+            "presentationType": "",
+            "presentation" : "",
+            "imgageUrl": "",
+            "language": "",
+            "exampleList" : [
+                {
+                    "id": "Q8ID1",
+                    "num": "1)",
+                    "title": "김"
+                },
+                {
+                    "id": "Q8ID2",
+                    "num": "2)",
+                    "title": "짱"
+                },
+                {
+                    "id": "Q8ID3",
+                    "num": "3)",
+                    "title": "배"
+                },
+                {
+                    "id": "Q8ID4",
+                    "num": "4)",
+                    "title": "현"
+                }
+
+            ],
+            "userAnswer" : [],
+            "grade" : []
+        }
+    ]
+}
