@@ -7,7 +7,6 @@ function generateMessage(name, morningGreeting) {
 
 const morningGreeting = function(name) {
     return '좋은 아침입니다, 철수!';
-
 };
 
 const eveningGreeting = function(name) {
